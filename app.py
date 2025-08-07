@@ -6,9 +6,8 @@ from datetime import datetime
 import numpy as np
 import os
 
-
+DB_URL = st.secrets["DB_URL"]
 engine = create_engine(DB_URL)
-
 
 # UI
 st.set_page_config(layout="wide")
