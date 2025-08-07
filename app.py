@@ -6,17 +6,9 @@ from datetime import datetime
 import numpy as np
 import os
 
-# Database config - MUST be set as environment variable
-DB_URL = os.getenv("DATABASE_URL")
-if not DB_URL:
-    st.error("🔒 Database connection not configured. Please contact administrator.")
-    st.stop()
 
-try:
-    engine = create_engine(DB_URL)
-except Exception as e:
-    st.error(f"🔒 Database connection failed: {str(e)}")
-    st.stop()
+engine = create_engine(DB_URL)
+
 
 # UI
 st.set_page_config(layout="wide")
