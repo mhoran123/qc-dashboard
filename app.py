@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine
 from datetime import datetime
 import numpy as np
 import os
